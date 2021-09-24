@@ -17,7 +17,7 @@ app.use((0, morgan_1.default)("dev"));
 app.use((0, cookie_parser_1.default)());
 const PORT = process.env.PORT || 3001;
 app.get("/", (req, res) => {
-    res.send({ test: "tesdsssdddt" });
+    res.send({ test: "tesdsssdddddt" });
 });
 app.listen(PORT, () => {
     console.log("This server is running on port ", PORT);

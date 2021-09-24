@@ -16,7 +16,7 @@ app.use(cookieParser());
 const PORT = process.env.PORT || 3001;
 
 app.get("/", (req, res) => {
-  res.send({ test: "tesdsssddddt" });
+  res.send({ test: "tesdsssdddddt" });
 });
 
 app.listen(PORT, () => {
