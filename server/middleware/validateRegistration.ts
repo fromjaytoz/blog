@@ -28,6 +28,8 @@ export const validateRegistration = async (
       .status(400)
       .json({ msg: "Your password must be at least 6 characters " });
   }
+
+  next();
 };
 
 const validatePhone = (phone: string) => {
