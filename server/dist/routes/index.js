@@ -3,7 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const URI = process.env.MONGODB_URL;
-mongoose_1.default.connect(`${URI}`, {}, () => { });
-//# sourceMappingURL=database.js.map
+const authRouter_1 = __importDefault(require("./authRouter"));
+const routes = {
+    authRouter: authRouter_1.default,
+};
+exports.default = routes;
+//# sourceMappingURL=index.js.map

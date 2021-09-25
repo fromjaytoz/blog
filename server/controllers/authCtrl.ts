@@ -3,7 +3,7 @@ import Users from "../models/userModel";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-export const authCtrl = {
+const authCtrl = {
   register: async (req: Request, res: Response) => {
     try {
       const { name, account, password } = req.body;
@@ -21,3 +21,5 @@ export const authCtrl = {
     }
   },
 };
+
+export default authCtrl;
