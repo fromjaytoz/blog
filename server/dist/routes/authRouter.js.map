@@ -1,1 +1,1 @@
-{"version":3,"file":"authRouter.js","sourceRoot":"","sources":["../../routes/authRouter.ts"],"names":[],"mappings":";;;;;AAAA,sDAA8B;AAC9B,uEAA+C;AAE/C,MAAM,MAAM,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAEhC,MAAM,CAAC,IAAI,CAAC,UAAU,EAAE,kBAAQ,CAAC,QAAQ,CAAC,CAAC;AAE3C,kBAAe,MAAM,CAAC"}
+{"version":3,"file":"authRouter.js","sourceRoot":"","sources":["../../routes/authRouter.ts"],"names":[],"mappings":";;;;;AAAA,sDAA8B;AAC9B,uEAA+C;AAE/C,MAAM,MAAM,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAEhC,MAAM,CAAC,IAAI,CAAC,WAAW,EAAE,kBAAQ,CAAC,QAAQ,CAAC,CAAC;AAE5C,kBAAe,MAAM,CAAC"}

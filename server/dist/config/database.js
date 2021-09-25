@@ -5,5 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const URI = process.env.MONGODB_URL;
-mongoose_1.default.connect(`${URI}`, {}, () => { });
+mongoose_1.default.connect(`${URI}`, {}, (err) => {
+    if (err)
+        throw err;
+    console.log("Connected to MongoDB");
+});
 //# sourceMappingURL=database.js.map

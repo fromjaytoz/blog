@@ -3,6 +3,6 @@ import authCtrl from "../controllers/authCtrl";
 
 const router = express.Router();
 
-router.post("register", authCtrl.register);
+router.post("/register", authCtrl.register);
 
 export default router;

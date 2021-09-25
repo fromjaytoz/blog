@@ -19,13 +19,21 @@ const authCtrl = {
         try {
             const { name, account, password } = req.body;
             const user = yield userModel_1.default.findOne({ account });
-            if (!user) {
-                return res.status(500).json({ msg: "Email/Phone already exists!" });
-            }
+            if (user)
+                return res.status(400).json({ msg: "Email/Phone already exists!" });
             const passwordHash = yield bcrypt_1.default.hash(password, 12);
-            res.json({ msg: "Register successfully" });
-            const newUser = new userModel_1.default({ name, account, password: passwordHash });
-            res.json({ msg: "Registration successful!", data: newUser });
+            const newUser = new userModel_1.default({
+                name,
+                account,
+                password: passwordHash,
+            });
+            newUser &&
+                res.json({
+                    status: "OK",
+                    msg: "Registration was successful!",
+                    data: newUser,
+                }) &&
+                newUser.save();
         }
         catch (err) {
             return res.status(500).json({ msg: err.message });
