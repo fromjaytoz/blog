@@ -17,7 +17,7 @@ export const validateRegistration = async (
 
   if (!account) {
     return res.status(400).json({ msg: "Please enter your email/phone" });
-  } else if (!validateEmail(account) || !validatePhone(account)) {
+  } else if (!validateEmail(account) && !validatePhone(account)) {
     return res
       .status(400)
       .json({ msg: "Please enter a valid email/phone number" });
@@ -25,7 +25,7 @@ export const validateRegistration = async (
 
   if (!password) {
     return res.status(400).json({ msg: "Please enter your password" });
-  } else if (password.length > 6) {
+  } else if (password.length < 6) {
     return res
       .status(400)
       .json({ msg: "Your password must be at least 6 characters " });
