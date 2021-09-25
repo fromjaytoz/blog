@@ -4,6 +4,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
+import routes from "./routes";
 
 const app = express();
 
@@ -13,11 +14,14 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(cookieParser());
 
-const PORT = process.env.PORT || 3001;
+//Routes
+app.use("/api", routes.authRouter);
 
-app.get("/", (req, res) => {
-  res.send({ test: "tesdsssdddddt" });
-});
+//Database
+import "./config/database";
+
+//Server Listening
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log("This server is running on port ", PORT);
